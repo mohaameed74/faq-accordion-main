@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root { 
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--Light-pink);
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    min-height: 100vh;
+}
+.card {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    margin: 20px auto;
+    padding: 3em;
+    border-radius: 1em;
+    margin-top: 120px;
+}
+.logo {
+    display: flex;
+    gap: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+.first,
+.second,
+.third,
+.fourth {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 0.8em;
+    width: 95%;
+}
+.first-text,.second-text,.third-text,.fourth-text { 
+    display: flex;
+    font-size: 0.8em;
+    gap: 3em;
+    align-items: center;
+    justify-content: space-between;
+}
+p {
+    color: var(--Grayish-purple);
+    margin-bottom: 10px;
+    line-height: 1.5em;
+}
+hr {
+    border: 1px solid #eee;
+    width: 100%;
+}
+h2 {
+    margin-top: 10px;
+    transition:   ease;
+    
+}
+h2:hover { 
+    color: rgb(212, 70, 212);
+    cursor: pointer;
+}
+img:hover{
+    cursor: pointer;
+}
+.img-1,
+ .img-2,
+ .img-3,
+ .img-4 {
+    display: flex;
+ }
+
+@media (max-width: 850px) {
+    body {
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+    }
+    .card {
+        width:70%; /* Full width on small screens */
+        padding: 2em; /* Reduced padding */
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .logo {
+        font-size: 1em;
+    }
+    .first-text, .second-text, .third-text, .fourth-text {
+        flex-direction: row; /* Stack text content vertically */
+        align-items: flex-start; /* Align text to the left */
+        gap: 1em;
+
+    }
+
+}
+
